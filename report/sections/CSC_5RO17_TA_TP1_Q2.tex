@@ -1,23 +1,44 @@
 \documentclass[../CSC_5RO17_TA_TP1.tex]{subfiles}
 
 \begin{document}
-\subsection*{Question 2}
-Au moins 4 points non colineares sont nécessaires pour faire l'estimation de l'homographie étaient donne que celui-ci contient 8 variables indépendants, chaque point aura 2 coordonnées: x et y, de cette façon il faut au moins 4 points pour résoudre le système lineare.
+\subsection{Question 2}
+\noindent L'\textbf{homographie} $\mathbf{H}$ contient 8 variables inconnues. Ainsi, 4 correspondances de points arbitraires $\mathbf{p}{i{\pi_1}} = \begin{pmatrix}x_{1i} & y_{1i}\end{pmatrix} \in \pi_1$ et $\mathbf{p}{i{\pi_2}} = \begin{pmatrix}x_{2i} & y_{2i}\end{pmatrix} \in \pi_2$, non colinéaires, sont nécessaires pour estimer la matrice $\mathbf{H}$.\\
 
-pour estimer l'homographie nécessaire pour réaligner l'image les modifications d'image suivant sont consideres:
-rotation
-translation
-
-de cette façon il été estimé que serait-il nécessaire de réaliser une rotation de ... et une translation de....
-
-il faut au moins 4 points pour découvrir la homographie de cette image.
-les points sur la image choisit sont
-
-les points ont été choisit au début avec la interface graphique et après ont été mantenue toujours les mêmes pour garantir des résultats prédictibles.
-
-après la taille du carre a été determine avec la aide de la trigonometrie
-
-
-les quatres points redéfinies pour la homographie seront:
-40 0
+\noindent L'image originale \textit{Pompei.jpg} est considérée comme le plan $\pi_1$, et l'image \textit{Pompei.jpg} recadrée est considérée comme le plan $\pi_2$. Les paires de points choisies seront:
+\begin{table}[H]
+    \centering
+    \begin{subtable}[H]{0.475\textwidth}
+        \begin{tabular}{cll}
+            \hline
+            - & $\mathbf{p}_{i_{\pi_1}}$ & $\mathbf{p}_{i_{\pi_2}}$\\
+            \hline
+            1 & $\mathbf{p}_{1_{\pi_1}} = \begin{pmatrix}120 & 023\end{pmatrix}$ & $\mathbf{p}_{1_{\pi_2}} = \begin{pmatrix}083 & 000\end{pmatrix}$\\
+            2 & $\mathbf{p}_{2_{\pi_1}} = \begin{pmatrix}073 & 287\end{pmatrix}$ & $\mathbf{p}_{2_{\pi_2}} = \begin{pmatrix}083 & 333\end{pmatrix}$\\
+            3 & $\mathbf{p}_{3_{\pi_1}} = \begin{pmatrix}409 & 299\end{pmatrix}$ & $\mathbf{p}_{3_{\pi_2}} = \begin{pmatrix}416 & 333\end{pmatrix}$\\
+            4 & $\mathbf{p}_{4_{\pi_1}} = \begin{pmatrix}386 & 022\end{pmatrix}$ & $\mathbf{p}_{4_{\pi_2}} = \begin{pmatrix}416 & 000\end{pmatrix}$\\
+            \hline
+        \end{tabular}
+        \caption{coordonnées $\mathbf{p}_{i_{\pi_{j}}}$}
+        \label{tab_homography_points}
+    \end{subtable}
+    \begin{subtable}[H]{0.475\textwidth}
+        \begin{tabular}{cll}
+            \hline
+            - & $\mathbf{x}_{i_{\pi_1}}$ & $\mathbf{x}_{i_{\pi_2}}$\\
+            \hline
+            1 & $\mathbf{x}_{1_{\pi_1}} = \begin{pmatrix}120 & 023 & 1\end{pmatrix}^{\intercal}$ & $\mathbf{x}_{1_{\pi_2}} = \begin{pmatrix}083 & 000 & 1\end{pmatrix}^{\intercal}$\\
+            2 & $\mathbf{x}_{2_{\pi_1}} = \begin{pmatrix}073 & 287 & 1\end{pmatrix}^{\intercal}$ & $\mathbf{x}_{2_{\pi_2}} = \begin{pmatrix}083 & 333 & 1\end{pmatrix}^{\intercal}$\\
+            3 & $\mathbf{x}_{3_{\pi_1}} = \begin{pmatrix}409 & 299 & 1\end{pmatrix}^{\intercal}$ & $\mathbf{x}_{3_{\pi_2}} = \begin{pmatrix}416 & 333 & 1\end{pmatrix}^{\intercal}$\\
+            4 & $\mathbf{x}_{4_{\pi_1}} = \begin{pmatrix}386 & 022 & 1\end{pmatrix}^{\intercal}$ & $\mathbf{x}_{4_{\pi_2}} = \begin{pmatrix}416 & 000 & 1\end{pmatrix}^{\intercal}$\\
+            \hline
+        \end{tabular}
+        \caption{vecteurs $\mathbf{x}_{i_{\pi_{j}}}$}
+        \label{tab_homography_coordinates}
+    \end{subtable}
+        \caption{Pairs de points pour le calcule de l'Homographie $\mathbf{H}$}
+    \end{table}
+\begin{remark}
+    Les points sur le plan $\pi_2$ sont alignés comme un carré.
+\end{remark}
+\noindent Les points ont été choisis au début avec l'interface graphique et ont ensuite été maintenus constants pour garantir des résultats reproductibles.
 \end{document}
