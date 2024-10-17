@@ -41,6 +41,11 @@ def q2() -> None:
         dtype=np.float32,
     )
 
+    for point in points_source:
+        x, y = point
+        cv2.circle(image_source, (int(x), int(y)), 8, (0, 255, 255), 1)
+    cv2.imshow('image_source_points', image_source)
+
     # calculate homography
     H, _ = cv2.findHomography(points_source, points_corrected)
     print(f'H:\n{H}')
@@ -51,4 +56,10 @@ def q2() -> None:
     )
     print(f'image_corrected: {image_corrected.shape}')
     cv2.imshow('image_corrected', image_corrected)
+
+    for point in points_corrected:
+        x, y = point
+        cv2.circle(image_corrected, (int(x), int(y)), 8, (0, 255, 255), 1)
+    cv2.imshow('image_corrected_points', image_corrected)
+
     cv2.waitKey(0)
