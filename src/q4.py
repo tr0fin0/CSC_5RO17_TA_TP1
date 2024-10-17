@@ -3,7 +3,7 @@ import cv2
 from q4_aux import *
 
 USE_PRE_SELECTED_POINTS = True # Set True to use the example points used in the rapport.
-IMAGE_SELECTION = "Keble" # 'Amsterdam', 'Keble' or 'Paris'.
+IMAGE_SELECTION = "Amsterdam" # 'Amsterdam', 'Keble' or 'Paris'.
 
 print("OpenCV Version: ", cv2.__version__)
 

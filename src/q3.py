@@ -182,5 +182,16 @@ def q3() -> None:
         f'[{get_reprojection_error(homograph_2, src_pts, dst_pts):.2e}] DLT method normalized'
     )
 
+    image_name = 'CSC_5RO17_TP1_Q3.png'
+    images_folder = os.path.abspath(
+        os.path.join(os.path.dirname(__file__), '..', 'data', 'output', image_name)
+    )
+
     plt.tight_layout()
+    file_name = 'homography.png'
+    path_file = os.path.abspath(
+        os.path.join(os.path.dirname(__file__), '..', 'data', 'output', file_name)
+    )
+    plt.savefig(path_file)
+
     plt.show()

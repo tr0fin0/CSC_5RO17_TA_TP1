@@ -23,19 +23,19 @@ def fix_color(img_source, img_reference, x_source, y_source, x_ref, y_ref):
 def get_image_paths(image_title):
 
     if(image_title == "Amsterdam"):
-        PATH_IMG1 = '../Images_Homographie/Amst-1.jpg'
-        PATH_IMG2 = '../Images_Homographie/Amst-2.jpg'
-        PATH_IMG3 = '../Images_Homographie/Amst-3.jpg'
+        PATH_IMG1 = '../data/Images_Homographie/Amst-1.jpg'
+        PATH_IMG2 = '../data/Images_Homographie/Amst-2.jpg'
+        PATH_IMG3 = '../data/Images_Homographie/Amst-3.jpg'
 
     if(image_title == "Keble"):
-        PATH_IMG1 = '../Images_Homographie/keble_a.jpg'
-        PATH_IMG2 = '../Images_Homographie/keble_b.jpg'
-        PATH_IMG3 = '../Images_Homographie/keble_c.jpg'
+        PATH_IMG1 = '../data/Images_Homographie/keble_a.jpg'
+        PATH_IMG2 = '../data/Images_Homographie/keble_b.jpg'
+        PATH_IMG3 = '../data/Images_Homographie/keble_c.jpg'
 
     if(image_title == "Paris"):
-        PATH_IMG1 = '../Images_Homographie/paris_a.jpg'
-        PATH_IMG2 = '../Images_Homographie/paris_b.jpg'
-        PATH_IMG3 = '../Images_Homographie/paris_c.jpg'
+        PATH_IMG1 = '../data/Images_Homographie/paris_a.jpg'
+        PATH_IMG2 = '../data/Images_Homographie/paris_b.jpg'
+        PATH_IMG3 = '../data/Images_Homographie/paris_c.jpg'
 
     return PATH_IMG1, PATH_IMG2, PATH_IMG3
 
