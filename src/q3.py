@@ -188,5 +188,10 @@ def q3() -> None:
     )
 
     plt.tight_layout()
-    plt.savefig(f'{images_folder}')
+    file_name = 'homography.png'
+    path_file = os.path.abspath(
+        os.path.join(os.path.dirname(__file__), '..', 'data', 'output', file_name)
+    )
+    plt.savefig(path_file)
+
     plt.show()
