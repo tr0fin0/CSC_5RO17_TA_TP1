@@ -1,0 +1,65 @@
+\documentclass[../5RO17_TP1.tex]{subfiles}
+
+\begin{document}
+\subsection{Question 1}
+\begin{definition}
+    Une \textbf{Homographie} $\mathbf{H}$ est une transformation projective entre deux plans $\pi_1$ et $\pi_2$ qui conserve les lignes droites.\\
+    
+    \noindent Une \textbf{Homographie} peut-être represente par l'équation suivant:
+    \begin{equation}
+        \boxed{
+            \underbrace{
+                \begin{bmatrix}
+                x_2\\ y_2\\ 1
+                \end{bmatrix}
+            }_{\mathbf{x}_{2}}
+            =
+            \underbrace{
+                \begin{bmatrix}
+                    a_{11} & a_{12} & t_x\\
+                    a_{21} & a_{22} & t_y\\
+                    v_1    & v_2    & 1\\
+                \end{bmatrix}
+            }_{\text{Homographie},\;\mathbf{H}}
+            \times
+            \underbrace{
+                \begin{bmatrix}
+                    x_1\\ y_1\\ 1
+                \end{bmatrix}
+            }_{\mathbf{x}_{1}}
+        }
+        \quad
+        \text{où}
+        \quad
+        \begin{cases}
+            \mathbf{a} &= \begin{bmatrix}
+                a_{11} & a_{12}\\
+                a_{21} & a_{22}\\
+            \end{bmatrix}\vspace{2mm}\\
+            \mathbf{t} &= \begin{pmatrix} t_{x} & t_{y} \end{pmatrix}^{\intercal}\vspace{2mm}\\
+            \mathbf{v} &= \begin{pmatrix} v_{1} & v_{2} \end{pmatrix}
+        \end{cases}
+    \end{equation}
+    Où:
+    \begin{enumerate}[noitemsep]
+        \item $\mathbf{x}_{2}$, \textbf{Vecteur Destination}: coordonnées après l'homographie;
+        \item $\mathbf{x}_{1}$, \textbf{Vecteur Source}: coordonnées avant l'homographie;
+        \item $\mathbf{a}$, \textbf{Matrix d'Affinité};
+        \item $\mathbf{t}$, \textbf{Vecteur de Translation};
+        \item $\mathbf{v}$, \textbf{Vecteur de Relation};
+    \end{enumerate}
+\end{definition}
+\begin{remark}
+    Dans ce travail practique, une vecteur $\mathbf{x}_{i} = \begin{bmatrix} x_{i} & y_{i} & 1 \end{bmatrix}^{\intercal}$ sera construit à partir d'un point $\mathbf{p}_{i} = \begin{pmatrix} x_{i} & y_{i} \end{pmatrix}$.
+\end{remark}
+\noindent En termes simples, cela signifie que si deux images d'une scène sont prises sous certaines conditions géométriques, la relation entre ces images peut être modélisée par une \textbf{Homographie}.\\
+
+\noindent Cas où la transformation est une homographie:
+\begin{enumerate}[noitemsep, rightmargin=\leftmargin]
+    \item images d'un même plan vu sous deux poses 3D différentes;
+    \item images prises par une caméra tournant autour de son centre optique;
+\end{enumerate}
+\begin{remark}
+    Les images destination et source devront avoir des données en commun pour que la transformation soit considérée comme une homographie.
+\end{remark}
+\end{document}
